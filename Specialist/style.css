@@ -1,0 +1,75 @@
+body {
+    /* position: relative; */
+    background-image: url("1b.jpeg");
+    background-size: cover;
+
+    /* background-color: black; */
+  }
+
+  .my-custom-scrollbar {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    overflow: auto;
+  }
+
+#sidebar-wrapper{
+    width: 16%;
+    height: 100vh;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+    margin-bottom: 0;
+    background-color: rgba(174, 190, 206, 0.95);
+}
+
+#signout{
+    margin-top: 39rem;
+}   
+
+h3{
+    margin-top: 50%;
+    margin-bottom: 0;
+}
+
+p{
+    padding: 10px;
+}
+
+.cancelled{
+    text-decoration: line-through;
+}
+
+#page-content-wrapper{
+    margin-top: 4%;
+    margin-left: 17%;
+    height: fit-content;
+    border:2px solid gray;
+    background-color: aliceblue;
+    width: auto ;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 50px 0;
+    /* background-image: url("img.jpg"); */
+}
+
+#page-content-wrapper2{
+    margin-top: 10%;
+    border-top: 2px solid black;
+    padding: 5%;
+}
+
+span{
+    display: flex;
+    justify-content: center;
+    /* padding: 60px; */
+    /* margin-top: 30%; */
+}
+
+h2{
+    margin-bottom: 30px;
+}
+
+.btn-outline-primary{
+    margin: 20px;
+}

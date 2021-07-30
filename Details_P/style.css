@@ -1,0 +1,22 @@
+.carousel-inner{
+    height: 50vh;
+    margin-bottom: 5vh;
+}
+
+.container-fluid{
+    padding-left: 40%;
+}
+
+.container-fluid-nav{
+    padding-left: 2%;
+}
+
+.logo-image{
+    width: 46px;
+    height: 38px;
+    /* overflow: hidden; */
+    margin-top: -6px;
+    display: inline-block;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}

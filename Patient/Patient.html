@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style1.css">
+
+    <!-- jquey -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <title>
+        Appointment Booking
+    </title>
+	<link rel="icon" href="../icon2.png" type="image/x-icon">
+
+</head>
+
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar-->
+        <div class="border bg-pink" id="sidebar-wrapper">
+            <div class="list-group list-group-flush">
+                <a class="border active button list-group-item list-group-item-action list-group-item-light p-3"
+                    href="Dash_P.html">Patient</a>
+                <a class="border list-group-item list-group-item-action list-group-item-light p-3"
+                    href="../Details_S/Login_S.html">Specialist</a>
+                <a class="border list-group-item list-group-item-action list-group-item-light p-3" id="signout"
+                    href="../SignUp/index.html">Sign Out</a>
+            </div>
+        </div>
+
+        <!-- Page content wrapper-->
+        <!-- <div id="page-content-wrapper" class="rounded"> -->
+        <div id="page-content-wrapper">
+            <h2>Book Appointment</h2>
+            <form action="list.html">
+
+                <label for="domain" class="form-label">Select Domain:</label>
+                <select id="domain" class="form-select" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>Physician</option>
+                    <option>Cardiologist</option>
+                    <option>Neurosurgeon</option>
+                    <option>Orthopaedic</option>
+                    <option>Oncologist</option>
+                    <option>ENT</option>
+                    <option>Dentist</option>
+                    <option>Gynecologist</option>
+                    <option>Oncologist</option>
+                    <option>Psychiatrist</option>
+                </select>
+
+                <label for="hospitals" class="form-label">Hospitals:</label>
+                <select id="hospitals" class="form-select">
+                    <option selected disabled value="">Choose...</option>
+                    <option>Hospital A</option>
+                    <option>Hospital B</option>
+                    <option>Hospital C</option>
+                    <option>Hospital D</option>
+                    <option>Hospital E</option>
+                    <option>Hospital F</option>
+                </select>
+
+                <label for="date" class="form-label">Select Date</label>
+                <!-- <select  >
+                    <option>Choose..</option>
+                </select> -->
+                <input type="date" id="date" class="form-select">
+
+                <label for="reason" class="form-label">Reason for appointment:</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+
+                <button type="submit" id="sbutton" class="btn btn-lg btn-outline-success">Search</button>
+
+            </form>
+            <!-- <div class="container">
+            </div> -->
+        </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Trying to save data into local storage and access from there to send it to database -->
+    <script>
+        // saving data to local storage
+        $(function () {
+            $("#sbutton").click(function () {
+
+                // for domain
+                let domain = $("#domain").val();
+                localStorage.setItem("domain", domain);
+
+                // for hospitals
+                let hospital = $("#hospitals").val();
+                localStorage.setItem("hospital", hospital);
+
+                // for date
+                let date = $("#date").val();
+                localStorage.setItem("date", date);
+
+                // for reason
+                let reason = $("#exampleFormControlTextarea1").val();
+                localStorage.setItem("reason", reason);
+
+                // finally transfer data to this page local storage.
+                window.location.href = "list.html";
+            });
+        });
+    </script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        -->
+</body>
+
+</html>

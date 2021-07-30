@@ -1,0 +1,49 @@
+body{
+    background-image: url("final.jpeg");
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+}
+
+/* body{
+    height: fit-content;
+    margin-bottom: 0px;
+} */    
+
+#sidebar-wrapper{
+    width: 19%;
+    height: 100vh;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    margin-bottom: 0;
+    background-color: rgba(174, 190, 206, 0.95);
+}
+
+#signout{
+    margin-top: 35rem;
+}
+
+.btn{
+    margin: 1rem;
+}
+
+textarea{
+    height: 10rem;
+}
+
+#page-content-wrapper{
+    margin: 8% 30%;
+    height: fit-content;
+    border:2px solid gray;
+    background-color: aliceblue;
+    width: 30%;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 50px 0;
+}
+
+#wrapper{
+    height: 100px;
+}
+
+
